@@ -31,6 +31,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "black"
+version = "26.5.1+ptl1"
 description = "The uncompromising code formatter."
 license = "MIT"
 license-files = ["LICENSE"]
@@ -63,7 +64,7 @@ dependencies = [
     "tomli>=1.1.0; python_version<'3.11'",
     "typing-extensions>=4.0.1; python_version<'3.11'",
 ]
-dynamic = ["readme", "version"]
+dynamic = ["readme"]
 
 [project.optional-dependencies]
 colorama = ["colorama>=0.4.3"]
@@ -123,8 +124,8 @@ Issues = "https://github.com/psf/black/issues"
 content-type = "text/markdown"
 fragments = [{ path = "README.md" }, { path = "CHANGES.md" }]
 
-[tool.hatch.version]
-source = "vcs"
+#[tool.hatch.version]
+#source = "vcs"
 
 [tool.hatch.build.hooks.vcs]
 version-file = "src/_black_version.py"
